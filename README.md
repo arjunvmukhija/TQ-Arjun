@@ -8,7 +8,8 @@ It is the application for the **Taqneeq 18.0 Tech Committee**.
 
 - **React + Vite** (Frontend framework)  
 - **CSS Grid / Flexbox** (Responsive layout)  
-- **Netlify** (Deployment)  
+- **Netlify** (Deployment)
+- **Figma** (Design)  
 
 ---
 
