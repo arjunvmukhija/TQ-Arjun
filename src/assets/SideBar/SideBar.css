@@ -1,0 +1,96 @@
+
+/*This page contains all the Styles for the SideBar component.*/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 15px;
+  background: #fff;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-top img {
+  width: 60px;
+  height: auto;
+}
+
+.sidebar-middle img {
+  border: 6px solid #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.sidebar-bottom nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.sidebar-bottom nav a {
+  text-decoration: none;
+  color: #999;            
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.sidebar-bottom nav a:hover {
+  color: #444;           
+}
+
+
+.sidebar-bottom nav a:first-child {
+  text-decoration: underline;
+  color: #444;        
+}
+
+.hamburger,
+.back-btn {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: transparent; 
+  border: none;
+  font-size: 20px;      
+  font-weight: bold;
+  color: #333;    
+  padding: 4px 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.back-btn {
+  font-size: 16px;
+  color: #444;          
+}
+
+.hamburger:hover,
+.back-btn:hover {
+  color: #000;       
+}
+
+/*This portion is to be used for the styles used in the mobile version. */
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0); 
+  }
+
+  .hamburger,
+  .back-btn {
+    display: block; 
+  }
+}
